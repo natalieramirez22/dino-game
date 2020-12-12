@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
 
 public class DinoGame extends JFrame 
 {
@@ -27,13 +28,16 @@ public class DinoGame extends JFrame
         setAlwaysOnTop(true);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
+
     @Override public void paint(Graphics g)
     {
         Dimension d = this.getSize();
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
-        dino.draw(g);
+        //dino.draw(g);
     }
 
     /*
@@ -46,25 +50,16 @@ public class DinoGame extends JFrame
     public static void main(String[] args) 
     {
         window = new DinoGame();
-        window.setVisible(true);
-        window.setLocationRelativeTo(null);
     }
 
-    @Override
+    /*
     public void keyPressed(KeyEvent k) 
     {
         dino.jumpUp(k);
     }
 
-    @Override
     public void keyReleased(KeyEvent k) 
     {
         dino.jumpDown(k);
-    }
-
-    @Override
-    public void keyTyped (KeyEvent k) 
-    {
-       // comment
-    }
+    } */
 }
