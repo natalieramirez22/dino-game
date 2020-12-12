@@ -2,6 +2,15 @@
 natalie - graphics
 12/12/20  */
 
-public class Graphics {
+
+import javax.swing.JPanel;
+import java.awt.Color;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.awt.Font;
+import javax.swing.ImageIcon;
+
+public class Graphics extends JPanel {
     
 }
