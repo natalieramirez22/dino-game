@@ -4,20 +4,23 @@ import javax.swing.ImageIcon;
 public class Dino {
     
     private int xPos, yPos;
-    public static ImageIcon dino = new ImageIcon("dino.jpg");
+    private ImageIcon dino;
 
     public Dino () {
         xPos = 200;
         yPos = 100;
+        dino = new ImageIcon("imgs/dino.jpg");
+        System.out.println(dino.getImage());
     }
 
-    public static void draw (Graphics g) {
+    public void draw (Graphics g) {
 
-        g.drawImage(dino.getImage(), 200, 100, null)
+        g.drawImage(dino.getImage(), 200, 100, null);
     }
 
     public void jump () {
         yPos += 50;
+        
         yPos -= 50;
     }
 }
