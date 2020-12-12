@@ -3,26 +3,37 @@
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 
-public class Dino {
+import java.awt.event.KeyEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Dino extends DinoGame {
     
     private int xPos, yPos;
     private ImageIcon dino;
+    
 
-    public Dino () {
+    public Dino() {
         xPos = 200;
         yPos = 100;
-        dino = new ImageIcon("imgs/dino.jpg");
-        System.out.println(dino.getImage());
+        dino = new ImageIcon("imgs/dino20%.jpg");
     }
 
-    public void draw (Graphics g) {
-
-        g.drawImage(dino.getImage(), 200, 100, null);
+    public void draw(Graphics g) {
+        g.drawImage(dino.getImage(), 100, 187, null);
     }
 
-    public void jump () {
-        yPos += 50;
+    public void jumpUp(KeyEvent e) { //Key pressed method
+        int key = e.getKeyCode();
 
-        yPos -= 50;
+        if (key == KeyEvent.VK_SPACE)
+            yPos += 50;
+    }
+
+    public void jumpDown(KeyEvent e) { //Key released method
+        int key = e.getKeyCode();
+
+        if (key == KeyEvent.VK_SPACE)
+            yPos -= 50;
     }
 }
