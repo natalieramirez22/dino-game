@@ -1,6 +1,10 @@
 // Hack TJ Dino Project
-//Dino class
+// Dino class
 
-public class Dino {
-    
+public class Dino 
+{
+        public static void main (String[] args) 
+    {
+
+    }
 }
