@@ -1,5 +1,5 @@
 # dino-game
 Java version of the no wifi dino game
 
-## Coders
-Natalie Ramirez, Sarah Fleming, Riley Lebon
+## coders
+natalie ramirez, sarah fleming, riley lebon
