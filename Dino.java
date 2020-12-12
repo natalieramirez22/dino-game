@@ -1,3 +1,5 @@
+// Hack TJ Dino Class
+
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 
@@ -20,7 +22,7 @@ public class Dino {
 
     public void jump () {
         yPos += 50;
-        
+
         yPos -= 50;
     }
 }
