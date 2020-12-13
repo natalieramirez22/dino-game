@@ -8,7 +8,7 @@ import javax.swing.Timer;
 public class Trees extends DinoGame{
  
    private int xPos, yPos;
-   private ImageIcon[] trees = new ImageIcon[4];
+   private static ImageIcon[] trees = new ImageIcon[4];
 
    Trees(int x) {
       xPos = x;
