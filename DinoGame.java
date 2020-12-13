@@ -37,22 +37,15 @@ public class DinoGame extends JFrame
         Dimension d = this.getSize();
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
-        //dino.draw(g);
+        g.drawRect(FRAME_X, FRAME_Y, FRAME_X, FRAME_Y);
+        dino.draw(g);
     }
-
-    /*
-    private void display(KeyEvent k) {
-        dino.jumpUp();
-        //add a timer so that jumpDown is delayed
-        dino.jumpDown();
-    } */
 
     public static void main(String[] args) 
     {
         window = new DinoGame();
     }
 
-    /*
     public void keyPressed(KeyEvent k) 
     {
         dino.jumpUp(k);
@@ -61,5 +54,6 @@ public class DinoGame extends JFrame
     public void keyReleased(KeyEvent k) 
     {
         dino.jumpDown(k);
-    } */
+    } 
+    
 }
