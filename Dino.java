@@ -8,7 +8,6 @@ public class Dino {
     
     private int xPos, yPos;
     private ImageIcon dino;
-    
 
     public Dino() {
         xPos = 100;

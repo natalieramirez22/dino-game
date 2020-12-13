@@ -25,7 +25,6 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
     //private Trees[] trees = new Trees[4];
 
     private JTextArea game;
-
     public static DinoGame window;
     
     public DinoGame()
@@ -78,7 +77,7 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
     public static void main(String[] args) 
     {
         window = new DinoGame();
-        Timer clock = new Timer(3, window);
+        Timer clock = new Timer(8, window); //3
         clock.start();
     }
 
