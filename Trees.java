@@ -5,21 +5,31 @@ import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
-public class Trees extends DinoGame{
+public class Trees {
  
    private int xPos, yPos;
-   private static ImageIcon[] trees = new ImageIcon[4];
+   private ImageIcon tree1;
+   private ImageIcon tree2;
+   private ImageIcon tree3;
+  // private static ImageIcon[] trees = new ImageIcon[4];
 
    Trees(int x) {
       xPos = x;
       yPos = 180;
-      for(int i = 0; i < trees.length; i++)
-         trees[i] = new ImageIcon("imgs/trees.jpg");
+    //  for(int i = 0; i < trees.length; i++)
+    //     trees[i] = new ImageIcon("imgs/tree.jpg");
+     tree1 = new ImageIcon("imgs/tree.jpg");
+     tree2 = new ImageIcon("imgs/tree.jpg");
+     tree3 = new ImageIcon("imgs/tree.jpg");
+
    }
    
-   public static void draw (Graphics g) {
-      for(int i = 0; i < trees.length; i++)
-         g.drawImage(trees[i].getImage(), 200, 100, null);
+   public void draw (Graphics g) {
+    //  for(int i = 0; i < trees.length; i++)
+     //    g.drawImage(trees[i].getImage(), 200, 100, null);
+     g.drawImage(tree1.getImage(), xPos, yPos, null);
+     g.drawImage(tree2.getImage(), xPos, yPos, null);
+     g.drawImage(tree3.getImage(), xPos, yPos, null);
   }
 
 /*  private void createJumpTimer() {
@@ -35,14 +45,13 @@ public class Trees extends DinoGame{
    }
    
 }
-  */ 
+ */
    public void scroll (){
-      while (gameRunning = true) {
-         xPos--;
+         xPos-=2;
          if (xPos <0)
             xPos = 800;
-      }
       
    }
+   
  
 }

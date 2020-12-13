@@ -7,17 +7,23 @@ import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Timer;
-import java.util.TimerTask;
+//import java.util.Timer;
+//import java.util.TimerTask;
+import javax.swing.Timer;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class DinoGame extends JFrame implements KeyListener
+public class DinoGame extends JFrame implements KeyListener, ActionListener
 {
     public static final int FRAME_X = 800;
     public static final int FRAME_Y = 400;
     public static boolean gameRunning = false;
 
     private Dino dino;
-    private Trees[] trees = new Trees[4];
+    private static Trees tree1;
+    private static Trees tree2;
+    private static Trees tree3;
+    //private Trees[] trees = new Trees[4];
 
     private JTextArea game;
 
@@ -26,6 +32,9 @@ public class DinoGame extends JFrame implements KeyListener
     public DinoGame()
      {
         dino = new Dino();
+        tree1 = new Trees(100);
+        tree2 = new Trees(300);
+        tree3 = new Trees(500);
         game = new JTextArea();
         game.setBackground(Color.WHITE);
         game.addKeyListener(this);
@@ -53,13 +62,27 @@ public class DinoGame extends JFrame implements KeyListener
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
         dino.draw(g);
-        for(Trees tree: trees)
-           tree.draw(g);
+        tree1.draw(g);
+        tree2.draw(g);
+        tree3.draw(g);
+       // for(Trees tree: trees)
+       //    tree.draw(g);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        tree1.scroll();
+        tree2.scroll();
+        tree3.scroll();
+        repaint();
     }
 
     public static void main(String[] args) 
     {
         window = new DinoGame();
+        Timer clock = new Timer(3, window);
+        clock.start();
+        
+
     }
 
     @Override
