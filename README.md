@@ -5,4 +5,6 @@ this game is a wonderful holiday themed way to relax! play as dave the spirited 
 to have fun and play a no wifi needed game
 
 ## coders
-natalie ramirez, sarah fleming, riley lebon
+natalie ramirez and sarah fleming
+
+- riley lebon: helping with devpost
