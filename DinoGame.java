@@ -17,6 +17,7 @@ public class DinoGame extends JFrame implements KeyListener
     public static boolean gameRunning = false;
 
     private Dino dino;
+    private Trees[] trees = new Trees[4];
 
     private JTextArea game;
 
@@ -52,6 +53,8 @@ public class DinoGame extends JFrame implements KeyListener
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
         dino.draw(g);
+        for(Trees tree: trees)
+           tree.draw(g);
     }
 
     public static void main(String[] args) 
