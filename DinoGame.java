@@ -20,19 +20,22 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
 
     private Dino dino;
     private static Trees tree1;
-    private static Trees tree2;
-    private static Trees tree3;
-    //private Trees[] trees = new Trees[4];
+    private Trees[] trees;
 
     private JTextArea game;
     public static DinoGame window;
+    int x = 300;
     
     public DinoGame()
      {
         dino = new Dino();
+        //instantiate and fill tree array
+        trees = new Trees[3];
         tree1 = new Trees(100);
-        tree2 = new Trees(300);
-        tree3 = new Trees(500);
+        for(int i = 0; i < trees.length; i++) {
+            trees[i] = new Trees(x);
+            x += 200;
+        }
         game = new JTextArea();
         game.setBackground(Color.WHITE);
         game.addKeyListener(this);
@@ -60,17 +63,14 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
         dino.draw(g);
-        tree1.draw(g);
-        tree2.draw(g);
-        tree3.draw(g);
-       // for(Trees tree: trees)
-       //    tree.draw(g);
+      //  tree1.draw(g);
+        for(Trees tree: trees)
+           tree.draw(g);
     }
 
     public void actionPerformed(ActionEvent e) {
-        tree1.scroll();
-        tree2.scroll();
-        tree3.scroll();
+        for(Trees tree: trees)
+            tree.scroll();
         repaint();
     }
 
@@ -85,7 +85,7 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
     public void keyPressed(KeyEvent k) 
     {
         dino.jumpUp(k);
-        repaint();
+         repaint();
     }
 
     @Override
