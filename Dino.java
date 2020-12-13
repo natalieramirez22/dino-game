@@ -11,26 +11,26 @@ public class Dino {
     
 
     public Dino() {
-        xPos = 200;
-        yPos = 100;
+        xPos = 100;
+        yPos = 187;
         dino = new ImageIcon("imgs/dino20%.jpg");
     }
 
     public void draw(Graphics g) {
-        g.drawImage(dino.getImage(), 100, 187, null);
+        g.drawImage(dino.getImage(), xPos, yPos, null);
     }
 
     public void jumpUp(KeyEvent e) { //Key pressed method
         int key = e.getKeyCode();
         System.out.println("DINO UP");
         if (key == KeyEvent.VK_SPACE)
-            yPos += 50;
+            yPos -= 100;
     }
  
     public void jumpDown(KeyEvent e) { //Key released method
         int key = e.getKeyCode();
         System.out.println("DINO DOWN");
         if (key == KeyEvent.VK_SPACE)
-            yPos -= 50;
+            yPos += 100;
     }
 } 

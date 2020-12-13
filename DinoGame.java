@@ -7,6 +7,8 @@ import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class DinoGame extends JFrame implements KeyListener
 {
@@ -24,13 +26,12 @@ public class DinoGame extends JFrame implements KeyListener
     {
         dino = new Dino();
         game = new JTextArea();
-        game.setBackground(Color.YELLOW);
+        game.setBackground(Color.WHITE);
         game.addKeyListener(this);
         this.add(game);
         game.setMinimumSize(new Dimension(FRAME_X, FRAME_Y));
         game.setBackground(Color.YELLOW);
         game.setMinimumSize(new Dimension(FRAME_X, FRAME_Y));
-
 
         setSize(FRAME_X, FRAME_Y);
         setTitle("dino xmas game");
@@ -41,14 +42,29 @@ public class DinoGame extends JFrame implements KeyListener
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
+
+        /*
+        private void createJumpTimer() {
+            Timer jumpTimer = new Timer (250,
+           
+            new ActionListener() {
+               @Override
+               public void actionPerformed(ActionEvent evt) {
+                  dino.jumpDown();
+                  repaint();
+                  jumpTimer.stop();
+               }
+            }
+            );
+         } */
     }
  
     @Override public void paint(Graphics g)
     {
         Dimension d = this.getSize();
+        g.fillRect(0, 0, FRAME_X, FRAME_Y);
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);
-        g.drawRect(FRAME_X, FRAME_Y, FRAME_X, FRAME_Y);
         dino.draw(g);
     }
 
