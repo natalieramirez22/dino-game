@@ -17,7 +17,7 @@ public class Trees extends DinoGame{
          trees[i] = new ImageIcon("imgs/trees.jpg");
    }
    
-   public void draw (Graphics g) {
+   public static void draw (Graphics g) {
       for(int i = 0; i < trees.length; i++)
          g.drawImage(trees[i].getImage(), 200, 100, null);
   }
