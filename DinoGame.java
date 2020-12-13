@@ -23,7 +23,7 @@ public class DinoGame extends JFrame implements KeyListener
     public static DinoGame window;
     
     public DinoGame()
-    {
+     {
         dino = new Dino();
         game = new JTextArea();
         game.setBackground(Color.WHITE);
@@ -42,21 +42,6 @@ public class DinoGame extends JFrame implements KeyListener
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-
-        /*
-        private void createJumpTimer() {
-            Timer jumpTimer = new Timer (250,
-           
-            new ActionListener() {
-               @Override
-               public void actionPerformed(ActionEvent evt) {
-                  dino.jumpDown();
-                  repaint();
-                  jumpTimer.stop();
-               }
-            }
-            );
-         } */
     }
  
     @Override public void paint(Graphics g)

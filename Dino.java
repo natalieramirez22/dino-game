@@ -12,8 +12,8 @@ public class Dino {
 
     public Dino() {
         xPos = 100;
-        yPos = 187;
-        dino = new ImageIcon("imgs/dino20%.jpg");
+        yPos = 170; //187
+        dino = new ImageIcon("imgs/dinoNoGround.jpg");
     }
 
     public void draw(Graphics g) {
