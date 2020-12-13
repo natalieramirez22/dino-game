@@ -15,12 +15,12 @@ public class Trees {
 
    Trees(int x) {
       xPos = x;
-      yPos = 180;
+      yPos = 230; //180
     //  for(int i = 0; i < trees.length; i++)
     //     trees[i] = new ImageIcon("imgs/tree.jpg");
-     tree1 = new ImageIcon("imgs/tree.jpg");
-     tree2 = new ImageIcon("imgs/tree.jpg");
-     tree3 = new ImageIcon("imgs/tree.jpg");
+     tree1 = new ImageIcon("imgs/treeSmall.jpg");
+     tree2 = new ImageIcon("imgs/treeSmall.jpg");
+     tree3 = new ImageIcon("imgs/treeSmall.jpg");
 
    }
    
@@ -46,12 +46,10 @@ public class Trees {
    
 }
  */
+
    public void scroll (){
-         xPos-=2;
+         xPos-=2; //If you want trees to stop put at -= 0 or just xPos // for end game situation
          if (xPos <0)
-            xPos = 800;
-      
+            xPos = 800; 
    }
-   
- 
 }

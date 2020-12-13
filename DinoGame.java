@@ -7,13 +7,10 @@ import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-<<<<<<< Updated upstream
 
 import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-=======
->>>>>>> Stashed changes
 
 public class DinoGame extends JFrame implements KeyListener, ActionListener
 {
@@ -83,8 +80,6 @@ public class DinoGame extends JFrame implements KeyListener, ActionListener
         window = new DinoGame();
         Timer clock = new Timer(3, window);
         clock.start();
-        
-
     }
 
     @Override
