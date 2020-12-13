@@ -37,7 +37,7 @@ public class Trees extends DinoGame{
 }
   */ 
    public void scroll (){
-      while (gameRunning == true) {
+      while (gameRunning = true) {
          xPos--;
          if (xPos <0)
             xPos = 800;
