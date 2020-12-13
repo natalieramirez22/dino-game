@@ -62,6 +62,7 @@ public class DinoGame extends JFrame implements KeyListener
     @Override public void paint(Graphics g)
     {
         Dimension d = this.getSize();
+        g.setColor(Color.WHITE);
         g.fillRect(0, 0, FRAME_X, FRAME_Y);
         g.setColor(Color.darkGray);
         g.drawLine(0,d.height/2 + 100,d.width,d.height/2+100);

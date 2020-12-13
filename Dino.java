@@ -22,14 +22,12 @@ public class Dino {
 
     public void jumpUp(KeyEvent e) { //Key pressed method
         int key = e.getKeyCode();
-        System.out.println("DINO UP");
         if (key == KeyEvent.VK_SPACE)
             yPos -= 100;
     }
  
     public void jumpDown(KeyEvent e) { //Key released method
         int key = e.getKeyCode();
-        System.out.println("DINO DOWN");
         if (key == KeyEvent.VK_SPACE)
             yPos += 100;
     }
