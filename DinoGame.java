@@ -16,18 +16,18 @@ public class DinoGame extends JFrame implements KeyListener
 
     private Dino dino;
 
-    private JTextField game;
+    private JTextArea game;
 
     public static DinoGame window;
-    //DinoGame.addKeyListener(this);
     
     public DinoGame()
     {
         dino = new Dino();
-        game = new JTextField("");
+        game = new JTextArea();
         game.setBackground(Color.YELLOW);
-        game.setMinimumSize(new Dimension(FRAME_X, FRAME_Y));
         game.addKeyListener(this);
+        this.add(game);
+        game.setMinimumSize(new Dimension(FRAME_X, FRAME_Y));
         game.setBackground(Color.YELLOW);
         game.setMinimumSize(new Dimension(FRAME_X, FRAME_Y));
 
@@ -42,7 +42,7 @@ public class DinoGame extends JFrame implements KeyListener
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
+ 
     @Override public void paint(Graphics g)
     {
         Dimension d = this.getSize();
@@ -57,23 +57,21 @@ public class DinoGame extends JFrame implements KeyListener
         window = new DinoGame();
     }
 
+    @Override
     public void keyPressed(KeyEvent k) 
     {
         dino.jumpUp(k);
-        System.out.println("Key pressed");
         repaint();
     }
 
+    @Override
     public void keyReleased(KeyEvent k) 
     {
         dino.jumpDown(k);
-        System.out.println("Key released");
         repaint();
     } 
 
     @Override
     public void keyTyped(KeyEvent k) {
-        //nothing
-    }
-    
+    }   
 }
