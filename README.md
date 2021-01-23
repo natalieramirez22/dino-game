@@ -7,4 +7,3 @@ to have fun and play a no wifi needed game
 ## coders
 - natalie ramirez: head coder 
 - sarah fleming: assistant coder
-- riley lebon: helping with devpost
